@@ -84,6 +84,7 @@ if (typeof $request !== 'undefined') {
   !(async () => {
     if ($.isNode()) {
       let JKCookie = []
+      console.log(process.env.JDK_COOKIE)
       if (process.env.JKD_COOKIE && process.env.JKD_COOKIE.indexOf('@') > -1) {
         JKCookie = process.env.JKD_COOKIE.split('@');
         console.log(`您的JKD_COOKIE选择的是用@隔开，共计 ${JKCookie.length} 个Cookie\n`)
